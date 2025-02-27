@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: eu.coresense.CognitiveModule.xtext.ui
+Bundle-ManifestVersion: 2
+Bundle-Name: eu.coresense.CognitiveModule.xtext.ui
+Bundle-Vendor: Fraunhofer IPA
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: eu.coresense.CognitiveModule.xtext.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: eu.coresense.CognitiveModule.xtext,
+ eu.coresense.CognitiveModule.xtext.ide,
+ eu.coresense.CognitiveModule,
+ org.eclipse.xtext.ui,
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.ui.editors;bundle-version="3.14.300",
+ org.eclipse.ui.ide;bundle-version="3.18.500",
+ org.eclipse.ui,
+ org.eclipse.compare,
+ org.eclipse.xtext.builder
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: eu.coresense.cognitivemodule.ui.quickfix,
+ eu.coresense.cognitivemodule.ui.contentassist,
+ eu.coresense.CognitiveModule.xtext.ui.internal
+Bundle-Activator: eu.coresense.CognitiveModule.xtext.ui.internal.XtextActivator

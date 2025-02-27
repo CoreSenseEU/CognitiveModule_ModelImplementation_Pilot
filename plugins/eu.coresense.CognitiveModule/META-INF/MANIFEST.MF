@@ -1,7 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: eu.coresense.CognitiveModule
-Bundle-SymbolicName: eu.coresense.CognitiveModule; singleton:=true
+Bundle-Name: %pluginName
+Bundle-SymbolicName: eu.coresense.CognitiveModule;singleton:=true
+Automatic-Module-Name: eu.coresense.CognitiveModule
 Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: Fraunhofer IPA
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: eu.coresense.CognitiveModule,
+ eu.coresense.CognitiveModule.impl,
+ eu.coresense.CognitiveModule.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy

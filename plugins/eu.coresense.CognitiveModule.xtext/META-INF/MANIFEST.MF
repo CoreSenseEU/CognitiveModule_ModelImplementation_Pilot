@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: eu.coresense.CognitiveModule.xtext
+Bundle-ManifestVersion: 2
+Bundle-Name: eu.coresense.CognitiveModule.xtext
+Bundle-Vendor: Fraunhofer IPA
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: eu.coresense.CognitiveModule.xtext; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: eu.coresense.CognitiveModule,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.38.0",
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: eu.coresense.cognitivemodule.scoping,
+ eu.coresense.cognitivemodule.validation,
+ eu.coresense.cognitivemodule.formatting2,
+ eu.coresense.cognitivemodule.serializer,
+ eu.coresense.cognitivemodule.generator,
+ eu.coresense.cognitivemodule.services,
+ eu.coresense.cognitivemodule,
+ eu.coresense.cognitivemodule.parser.antlr.internal,
+ eu.coresense.cognitivemodule.parser.antlr,
+ eu.coresense.cognitivemodule.parser.antlr.lexer
+Import-Package: org.apache.log4j
