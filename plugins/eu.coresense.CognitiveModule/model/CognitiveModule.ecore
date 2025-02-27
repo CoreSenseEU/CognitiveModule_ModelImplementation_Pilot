@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="CognitiveModule" nsURI="https://coresense.eu/CognitiveModule"
+    nsPrefix="CognitiveModule">
+  <eClassifiers xsi:type="ecore:EClass" name="Core">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Modelet">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="topic" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Meta">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Coupling">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CognitiveModule">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="core" lowerBound="1" eType="#//Core"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="efferent" upperBound="-1"
+        eType="#//Modelet" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="afferent" upperBound="-1"
+        eType="#//Modelet" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="meta" lowerBound="1" eType="#//Meta"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="coupling" lowerBound="1"
+        eType="#//Coupling" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>
