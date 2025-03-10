@@ -10,7 +10,10 @@ Require-Bundle: eu.coresense.CognitiveModule.xtext,
  eu.coresense.CognitiveModule,
  org.eclipse.xtext.ide,
  org.eclipse.xtext.xbase.ide,
- org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)",
+ org.eclipse.lsp4j.jsonrpc,
+ org.eclipse.lsp4j,
+ com.google.gson
 Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: eu.coresense.cognitivemodule.ide.contentassist.antlr.internal,
  eu.coresense.cognitivemodule.ide.contentassist.antlr,

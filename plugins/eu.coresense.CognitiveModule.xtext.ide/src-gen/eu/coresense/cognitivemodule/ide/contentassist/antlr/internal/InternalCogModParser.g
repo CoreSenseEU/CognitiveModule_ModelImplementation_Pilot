@@ -84,31 +84,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-// Entry rule entryRuleEString
-entryRuleEString
-:
-{ before(grammarAccess.getEStringRule()); }
-	 ruleEString
-{ after(grammarAccess.getEStringRule()); } 
-	 EOF 
-;
-
-// Rule EString
-ruleEString 
-	@init {
-		int stackSize = keepStackSize();
-	}
-	:
-	(
-		{ before(grammarAccess.getEStringAccess().getAlternatives()); }
-		(rule__EString__Alternatives)
-		{ after(grammarAccess.getEStringAccess().getAlternatives()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 // Entry rule entryRuleCore
 entryRuleCore
 :
@@ -203,6 +178,31 @@ ruleCoupling
 		{ before(grammarAccess.getCouplingAccess().getGroup()); }
 		(rule__Coupling__Group__0)
 		{ after(grammarAccess.getCouplingAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleEString
+entryRuleEString
+:
+{ before(grammarAccess.getEStringRule()); }
+	 ruleEString
+{ after(grammarAccess.getEStringRule()); } 
+	 EOF 
+;
+
+// Rule EString
+ruleEString 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getEStringAccess().getAlternatives()); }
+		(rule__EString__Alternatives)
+		{ after(grammarAccess.getEStringAccess().getAlternatives()); }
 	)
 ;
 finally {

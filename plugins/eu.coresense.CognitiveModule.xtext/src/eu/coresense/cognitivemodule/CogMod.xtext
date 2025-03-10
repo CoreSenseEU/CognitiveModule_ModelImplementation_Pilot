@@ -22,22 +22,6 @@ CognitiveModule returns CognitiveModule:
         END
     ;
 
-
-//CognitiveModule returns CognitiveModule:
-//	'CognitiveModule'
-//	name=EString
-//	'{'
-//		'core' core=Core
-//		('efferent' '{' efferent+=Modelet ( "," efferent+=Modelet)* '}' )?
-//		('afferent' '{' afferent+=Modelet ( "," afferent+=Modelet)* '}' )?
-//		'meta' meta=Meta
-//		'coupling' coupling=Coupling
-//	'}';
-
-
-EString returns ecore::EString:
-	STRING | ID;
-
 Core returns Core:
 	{Core}
 	name=EString;
@@ -57,7 +41,8 @@ Coupling returns Coupling:
 	{Coupling}
 	name=EString;
 	
-	
+EString returns ecore::EString:
+    STRING | ID;
 
 ///////////////////
 // YAML format

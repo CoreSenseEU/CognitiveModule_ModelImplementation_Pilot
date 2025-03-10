@@ -494,124 +494,8 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleCognitiveModule"
 
 
-    // $ANTLR start "entryRuleEString"
-    // InternalCogModParser.g:249:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
-    public final String entryRuleEString() throws RecognitionException {
-        String current = null;
-
-        AntlrDatatypeRuleToken iv_ruleEString = null;
-
-
-        try {
-            // InternalCogModParser.g:249:47: (iv_ruleEString= ruleEString EOF )
-            // InternalCogModParser.g:250:2: iv_ruleEString= ruleEString EOF
-            {
-             newCompositeNode(grammarAccess.getEStringRule()); 
-            pushFollow(FOLLOW_1);
-            iv_ruleEString=ruleEString();
-
-            state._fsp--;
-
-             current =iv_ruleEString.getText(); 
-            match(input,EOF,FOLLOW_2); 
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleEString"
-
-
-    // $ANTLR start "ruleEString"
-    // InternalCogModParser.g:256:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
-    public final AntlrDatatypeRuleToken ruleEString() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
-
-        Token this_STRING_0=null;
-        Token this_ID_1=null;
-
-
-        	enterRule();
-
-        try {
-            // InternalCogModParser.g:262:2: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
-            // InternalCogModParser.g:263:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
-            {
-            // InternalCogModParser.g:263:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
-            int alt5=2;
-            int LA5_0 = input.LA(1);
-
-            if ( (LA5_0==RULE_STRING) ) {
-                alt5=1;
-            }
-            else if ( (LA5_0==RULE_ID) ) {
-                alt5=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
-
-                throw nvae;
-            }
-            switch (alt5) {
-                case 1 :
-                    // InternalCogModParser.g:264:3: this_STRING_0= RULE_STRING
-                    {
-                    this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
-
-                    			current.merge(this_STRING_0);
-                    		
-
-                    			newLeafNode(this_STRING_0, grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0());
-                    		
-
-                    }
-                    break;
-                case 2 :
-                    // InternalCogModParser.g:272:3: this_ID_1= RULE_ID
-                    {
-                    this_ID_1=(Token)match(input,RULE_ID,FOLLOW_2); 
-
-                    			current.merge(this_ID_1);
-                    		
-
-                    			newLeafNode(this_ID_1, grammarAccess.getEStringAccess().getIDTerminalRuleCall_1());
-                    		
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-
-            	leaveRule();
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleEString"
-
-
     // $ANTLR start "entryRuleCore"
-    // InternalCogModParser.g:283:1: entryRuleCore returns [EObject current=null] : iv_ruleCore= ruleCore EOF ;
+    // InternalCogModParser.g:249:1: entryRuleCore returns [EObject current=null] : iv_ruleCore= ruleCore EOF ;
     public final EObject entryRuleCore() throws RecognitionException {
         EObject current = null;
 
@@ -619,8 +503,8 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCogModParser.g:283:45: (iv_ruleCore= ruleCore EOF )
-            // InternalCogModParser.g:284:2: iv_ruleCore= ruleCore EOF
+            // InternalCogModParser.g:249:45: (iv_ruleCore= ruleCore EOF )
+            // InternalCogModParser.g:250:2: iv_ruleCore= ruleCore EOF
             {
              newCompositeNode(grammarAccess.getCoreRule()); 
             pushFollow(FOLLOW_1);
@@ -647,7 +531,7 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCore"
-    // InternalCogModParser.g:290:1: ruleCore returns [EObject current=null] : ( () ( (lv_name_1_0= ruleEString ) ) ) ;
+    // InternalCogModParser.g:256:1: ruleCore returns [EObject current=null] : ( () ( (lv_name_1_0= ruleEString ) ) ) ;
     public final EObject ruleCore() throws RecognitionException {
         EObject current = null;
 
@@ -658,14 +542,14 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCogModParser.g:296:2: ( ( () ( (lv_name_1_0= ruleEString ) ) ) )
-            // InternalCogModParser.g:297:2: ( () ( (lv_name_1_0= ruleEString ) ) )
+            // InternalCogModParser.g:262:2: ( ( () ( (lv_name_1_0= ruleEString ) ) ) )
+            // InternalCogModParser.g:263:2: ( () ( (lv_name_1_0= ruleEString ) ) )
             {
-            // InternalCogModParser.g:297:2: ( () ( (lv_name_1_0= ruleEString ) ) )
-            // InternalCogModParser.g:298:3: () ( (lv_name_1_0= ruleEString ) )
+            // InternalCogModParser.g:263:2: ( () ( (lv_name_1_0= ruleEString ) ) )
+            // InternalCogModParser.g:264:3: () ( (lv_name_1_0= ruleEString ) )
             {
-            // InternalCogModParser.g:298:3: ()
-            // InternalCogModParser.g:299:4: 
+            // InternalCogModParser.g:264:3: ()
+            // InternalCogModParser.g:265:4: 
             {
 
             				current = forceCreateModelElement(
@@ -675,11 +559,11 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalCogModParser.g:305:3: ( (lv_name_1_0= ruleEString ) )
-            // InternalCogModParser.g:306:4: (lv_name_1_0= ruleEString )
+            // InternalCogModParser.g:271:3: ( (lv_name_1_0= ruleEString ) )
+            // InternalCogModParser.g:272:4: (lv_name_1_0= ruleEString )
             {
-            // InternalCogModParser.g:306:4: (lv_name_1_0= ruleEString )
-            // InternalCogModParser.g:307:5: lv_name_1_0= ruleEString
+            // InternalCogModParser.g:272:4: (lv_name_1_0= ruleEString )
+            // InternalCogModParser.g:273:5: lv_name_1_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getCoreAccess().getNameEStringParserRuleCall_1_0());
@@ -729,7 +613,7 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleModelet"
-    // InternalCogModParser.g:328:1: entryRuleModelet returns [EObject current=null] : iv_ruleModelet= ruleModelet EOF ;
+    // InternalCogModParser.g:294:1: entryRuleModelet returns [EObject current=null] : iv_ruleModelet= ruleModelet EOF ;
     public final EObject entryRuleModelet() throws RecognitionException {
         EObject current = null;
 
@@ -737,8 +621,8 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCogModParser.g:328:48: (iv_ruleModelet= ruleModelet EOF )
-            // InternalCogModParser.g:329:2: iv_ruleModelet= ruleModelet EOF
+            // InternalCogModParser.g:294:48: (iv_ruleModelet= ruleModelet EOF )
+            // InternalCogModParser.g:295:2: iv_ruleModelet= ruleModelet EOF
             {
              newCompositeNode(grammarAccess.getModeletRule()); 
             pushFollow(FOLLOW_1);
@@ -765,7 +649,7 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleModelet"
-    // InternalCogModParser.g:335:1: ruleModelet returns [EObject current=null] : ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon this_BEGIN_2= RULE_BEGIN otherlv_3= Topic ( (lv_topic_4_0= ruleEString ) ) otherlv_5= Type ( (lv_type_6_0= ruleEString ) ) this_END_7= RULE_END ) ;
+    // InternalCogModParser.g:301:1: ruleModelet returns [EObject current=null] : ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon this_BEGIN_2= RULE_BEGIN otherlv_3= Topic ( (lv_topic_4_0= ruleEString ) ) otherlv_5= Type ( (lv_type_6_0= ruleEString ) ) this_END_7= RULE_END ) ;
     public final EObject ruleModelet() throws RecognitionException {
         EObject current = null;
 
@@ -785,17 +669,17 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCogModParser.g:341:2: ( ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon this_BEGIN_2= RULE_BEGIN otherlv_3= Topic ( (lv_topic_4_0= ruleEString ) ) otherlv_5= Type ( (lv_type_6_0= ruleEString ) ) this_END_7= RULE_END ) )
-            // InternalCogModParser.g:342:2: ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon this_BEGIN_2= RULE_BEGIN otherlv_3= Topic ( (lv_topic_4_0= ruleEString ) ) otherlv_5= Type ( (lv_type_6_0= ruleEString ) ) this_END_7= RULE_END )
+            // InternalCogModParser.g:307:2: ( ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon this_BEGIN_2= RULE_BEGIN otherlv_3= Topic ( (lv_topic_4_0= ruleEString ) ) otherlv_5= Type ( (lv_type_6_0= ruleEString ) ) this_END_7= RULE_END ) )
+            // InternalCogModParser.g:308:2: ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon this_BEGIN_2= RULE_BEGIN otherlv_3= Topic ( (lv_topic_4_0= ruleEString ) ) otherlv_5= Type ( (lv_type_6_0= ruleEString ) ) this_END_7= RULE_END )
             {
-            // InternalCogModParser.g:342:2: ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon this_BEGIN_2= RULE_BEGIN otherlv_3= Topic ( (lv_topic_4_0= ruleEString ) ) otherlv_5= Type ( (lv_type_6_0= ruleEString ) ) this_END_7= RULE_END )
-            // InternalCogModParser.g:343:3: ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon this_BEGIN_2= RULE_BEGIN otherlv_3= Topic ( (lv_topic_4_0= ruleEString ) ) otherlv_5= Type ( (lv_type_6_0= ruleEString ) ) this_END_7= RULE_END
+            // InternalCogModParser.g:308:2: ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon this_BEGIN_2= RULE_BEGIN otherlv_3= Topic ( (lv_topic_4_0= ruleEString ) ) otherlv_5= Type ( (lv_type_6_0= ruleEString ) ) this_END_7= RULE_END )
+            // InternalCogModParser.g:309:3: ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon this_BEGIN_2= RULE_BEGIN otherlv_3= Topic ( (lv_topic_4_0= ruleEString ) ) otherlv_5= Type ( (lv_type_6_0= ruleEString ) ) this_END_7= RULE_END
             {
-            // InternalCogModParser.g:343:3: ( (lv_name_0_0= ruleEString ) )
-            // InternalCogModParser.g:344:4: (lv_name_0_0= ruleEString )
+            // InternalCogModParser.g:309:3: ( (lv_name_0_0= ruleEString ) )
+            // InternalCogModParser.g:310:4: (lv_name_0_0= ruleEString )
             {
-            // InternalCogModParser.g:344:4: (lv_name_0_0= ruleEString )
-            // InternalCogModParser.g:345:5: lv_name_0_0= ruleEString
+            // InternalCogModParser.g:310:4: (lv_name_0_0= ruleEString )
+            // InternalCogModParser.g:311:5: lv_name_0_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getModeletAccess().getNameEStringParserRuleCall_0_0());
@@ -834,11 +718,11 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_3, grammarAccess.getModeletAccess().getTopicKeyword_3());
             		
-            // InternalCogModParser.g:374:3: ( (lv_topic_4_0= ruleEString ) )
-            // InternalCogModParser.g:375:4: (lv_topic_4_0= ruleEString )
+            // InternalCogModParser.g:340:3: ( (lv_topic_4_0= ruleEString ) )
+            // InternalCogModParser.g:341:4: (lv_topic_4_0= ruleEString )
             {
-            // InternalCogModParser.g:375:4: (lv_topic_4_0= ruleEString )
-            // InternalCogModParser.g:376:5: lv_topic_4_0= ruleEString
+            // InternalCogModParser.g:341:4: (lv_topic_4_0= ruleEString )
+            // InternalCogModParser.g:342:5: lv_topic_4_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getModeletAccess().getTopicEStringParserRuleCall_4_0());
@@ -869,11 +753,11 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_5, grammarAccess.getModeletAccess().getTypeKeyword_5());
             		
-            // InternalCogModParser.g:397:3: ( (lv_type_6_0= ruleEString ) )
-            // InternalCogModParser.g:398:4: (lv_type_6_0= ruleEString )
+            // InternalCogModParser.g:363:3: ( (lv_type_6_0= ruleEString ) )
+            // InternalCogModParser.g:364:4: (lv_type_6_0= ruleEString )
             {
-            // InternalCogModParser.g:398:4: (lv_type_6_0= ruleEString )
-            // InternalCogModParser.g:399:5: lv_type_6_0= ruleEString
+            // InternalCogModParser.g:364:4: (lv_type_6_0= ruleEString )
+            // InternalCogModParser.g:365:5: lv_type_6_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getModeletAccess().getTypeEStringParserRuleCall_6_0());
@@ -927,7 +811,7 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMeta"
-    // InternalCogModParser.g:424:1: entryRuleMeta returns [EObject current=null] : iv_ruleMeta= ruleMeta EOF ;
+    // InternalCogModParser.g:390:1: entryRuleMeta returns [EObject current=null] : iv_ruleMeta= ruleMeta EOF ;
     public final EObject entryRuleMeta() throws RecognitionException {
         EObject current = null;
 
@@ -935,8 +819,8 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCogModParser.g:424:45: (iv_ruleMeta= ruleMeta EOF )
-            // InternalCogModParser.g:425:2: iv_ruleMeta= ruleMeta EOF
+            // InternalCogModParser.g:390:45: (iv_ruleMeta= ruleMeta EOF )
+            // InternalCogModParser.g:391:2: iv_ruleMeta= ruleMeta EOF
             {
              newCompositeNode(grammarAccess.getMetaRule()); 
             pushFollow(FOLLOW_1);
@@ -963,7 +847,7 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMeta"
-    // InternalCogModParser.g:431:1: ruleMeta returns [EObject current=null] : ( () ( (lv_name_1_0= ruleEString ) ) ) ;
+    // InternalCogModParser.g:397:1: ruleMeta returns [EObject current=null] : ( () ( (lv_name_1_0= ruleEString ) ) ) ;
     public final EObject ruleMeta() throws RecognitionException {
         EObject current = null;
 
@@ -974,14 +858,14 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCogModParser.g:437:2: ( ( () ( (lv_name_1_0= ruleEString ) ) ) )
-            // InternalCogModParser.g:438:2: ( () ( (lv_name_1_0= ruleEString ) ) )
+            // InternalCogModParser.g:403:2: ( ( () ( (lv_name_1_0= ruleEString ) ) ) )
+            // InternalCogModParser.g:404:2: ( () ( (lv_name_1_0= ruleEString ) ) )
             {
-            // InternalCogModParser.g:438:2: ( () ( (lv_name_1_0= ruleEString ) ) )
-            // InternalCogModParser.g:439:3: () ( (lv_name_1_0= ruleEString ) )
+            // InternalCogModParser.g:404:2: ( () ( (lv_name_1_0= ruleEString ) ) )
+            // InternalCogModParser.g:405:3: () ( (lv_name_1_0= ruleEString ) )
             {
-            // InternalCogModParser.g:439:3: ()
-            // InternalCogModParser.g:440:4: 
+            // InternalCogModParser.g:405:3: ()
+            // InternalCogModParser.g:406:4: 
             {
 
             				current = forceCreateModelElement(
@@ -991,11 +875,11 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalCogModParser.g:446:3: ( (lv_name_1_0= ruleEString ) )
-            // InternalCogModParser.g:447:4: (lv_name_1_0= ruleEString )
+            // InternalCogModParser.g:412:3: ( (lv_name_1_0= ruleEString ) )
+            // InternalCogModParser.g:413:4: (lv_name_1_0= ruleEString )
             {
-            // InternalCogModParser.g:447:4: (lv_name_1_0= ruleEString )
-            // InternalCogModParser.g:448:5: lv_name_1_0= ruleEString
+            // InternalCogModParser.g:413:4: (lv_name_1_0= ruleEString )
+            // InternalCogModParser.g:414:5: lv_name_1_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getMetaAccess().getNameEStringParserRuleCall_1_0());
@@ -1045,7 +929,7 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCoupling"
-    // InternalCogModParser.g:469:1: entryRuleCoupling returns [EObject current=null] : iv_ruleCoupling= ruleCoupling EOF ;
+    // InternalCogModParser.g:435:1: entryRuleCoupling returns [EObject current=null] : iv_ruleCoupling= ruleCoupling EOF ;
     public final EObject entryRuleCoupling() throws RecognitionException {
         EObject current = null;
 
@@ -1053,8 +937,8 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCogModParser.g:469:49: (iv_ruleCoupling= ruleCoupling EOF )
-            // InternalCogModParser.g:470:2: iv_ruleCoupling= ruleCoupling EOF
+            // InternalCogModParser.g:435:49: (iv_ruleCoupling= ruleCoupling EOF )
+            // InternalCogModParser.g:436:2: iv_ruleCoupling= ruleCoupling EOF
             {
              newCompositeNode(grammarAccess.getCouplingRule()); 
             pushFollow(FOLLOW_1);
@@ -1081,7 +965,7 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCoupling"
-    // InternalCogModParser.g:476:1: ruleCoupling returns [EObject current=null] : ( () ( (lv_name_1_0= ruleEString ) ) ) ;
+    // InternalCogModParser.g:442:1: ruleCoupling returns [EObject current=null] : ( () ( (lv_name_1_0= ruleEString ) ) ) ;
     public final EObject ruleCoupling() throws RecognitionException {
         EObject current = null;
 
@@ -1092,14 +976,14 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCogModParser.g:482:2: ( ( () ( (lv_name_1_0= ruleEString ) ) ) )
-            // InternalCogModParser.g:483:2: ( () ( (lv_name_1_0= ruleEString ) ) )
+            // InternalCogModParser.g:448:2: ( ( () ( (lv_name_1_0= ruleEString ) ) ) )
+            // InternalCogModParser.g:449:2: ( () ( (lv_name_1_0= ruleEString ) ) )
             {
-            // InternalCogModParser.g:483:2: ( () ( (lv_name_1_0= ruleEString ) ) )
-            // InternalCogModParser.g:484:3: () ( (lv_name_1_0= ruleEString ) )
+            // InternalCogModParser.g:449:2: ( () ( (lv_name_1_0= ruleEString ) ) )
+            // InternalCogModParser.g:450:3: () ( (lv_name_1_0= ruleEString ) )
             {
-            // InternalCogModParser.g:484:3: ()
-            // InternalCogModParser.g:485:4: 
+            // InternalCogModParser.g:450:3: ()
+            // InternalCogModParser.g:451:4: 
             {
 
             				current = forceCreateModelElement(
@@ -1109,11 +993,11 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalCogModParser.g:491:3: ( (lv_name_1_0= ruleEString ) )
-            // InternalCogModParser.g:492:4: (lv_name_1_0= ruleEString )
+            // InternalCogModParser.g:457:3: ( (lv_name_1_0= ruleEString ) )
+            // InternalCogModParser.g:458:4: (lv_name_1_0= ruleEString )
             {
-            // InternalCogModParser.g:492:4: (lv_name_1_0= ruleEString )
-            // InternalCogModParser.g:493:5: lv_name_1_0= ruleEString
+            // InternalCogModParser.g:458:4: (lv_name_1_0= ruleEString )
+            // InternalCogModParser.g:459:5: lv_name_1_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getCouplingAccess().getNameEStringParserRuleCall_1_0());
@@ -1160,6 +1044,122 @@ public class InternalCogModParser extends AbstractInternalAntlrParser {
         return current;
     }
     // $ANTLR end "ruleCoupling"
+
+
+    // $ANTLR start "entryRuleEString"
+    // InternalCogModParser.g:480:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
+    public final String entryRuleEString() throws RecognitionException {
+        String current = null;
+
+        AntlrDatatypeRuleToken iv_ruleEString = null;
+
+
+        try {
+            // InternalCogModParser.g:480:47: (iv_ruleEString= ruleEString EOF )
+            // InternalCogModParser.g:481:2: iv_ruleEString= ruleEString EOF
+            {
+             newCompositeNode(grammarAccess.getEStringRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleEString=ruleEString();
+
+            state._fsp--;
+
+             current =iv_ruleEString.getText(); 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleEString"
+
+
+    // $ANTLR start "ruleEString"
+    // InternalCogModParser.g:487:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
+    public final AntlrDatatypeRuleToken ruleEString() throws RecognitionException {
+        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+
+        Token this_STRING_0=null;
+        Token this_ID_1=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalCogModParser.g:493:2: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
+            // InternalCogModParser.g:494:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            {
+            // InternalCogModParser.g:494:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            int alt5=2;
+            int LA5_0 = input.LA(1);
+
+            if ( (LA5_0==RULE_STRING) ) {
+                alt5=1;
+            }
+            else if ( (LA5_0==RULE_ID) ) {
+                alt5=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 5, 0, input);
+
+                throw nvae;
+            }
+            switch (alt5) {
+                case 1 :
+                    // InternalCogModParser.g:495:3: this_STRING_0= RULE_STRING
+                    {
+                    this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
+
+                    			current.merge(this_STRING_0);
+                    		
+
+                    			newLeafNode(this_STRING_0, grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0());
+                    		
+
+                    }
+                    break;
+                case 2 :
+                    // InternalCogModParser.g:503:3: this_ID_1= RULE_ID
+                    {
+                    this_ID_1=(Token)match(input,RULE_ID,FOLLOW_2); 
+
+                    			current.merge(this_ID_1);
+                    		
+
+                    			newLeafNode(this_ID_1, grammarAccess.getEStringAccess().getIDTerminalRuleCall_1());
+                    		
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleEString"
 
     // Delegated rules
 

@@ -177,35 +177,6 @@ public class CogModGrammarAccess extends AbstractElementFinder.AbstractGrammarEl
 		//END
 		public RuleCall getENDTerminalRuleCall_12() { return cENDTerminalRuleCall_12; }
 	}
-	public class EStringElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.coresense.cognitivemodule.CogMod.EString");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cSTRINGTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		
-		////CognitiveModule returns CognitiveModule:
-		////    'CognitiveModule'
-		////    name=EString
-		////    '{'
-		////        'core' core=Core
-		////        ('efferent' '{' efferent+=Modelet ( "," efferent+=Modelet)* '}' )?
-		////        ('afferent' '{' afferent+=Modelet ( "," afferent+=Modelet)* '}' )?
-		////        'meta' meta=Meta
-		////        'coupling' coupling=Coupling
-		////    '}';
-		//EString returns ecore::EString:
-		//    STRING | ID;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//STRING | ID
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_0() { return cSTRINGTerminalRuleCall_0; }
-		
-		//ID
-		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
-	}
 	public class CoreElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.coresense.cognitivemodule.CogMod.Core");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -344,14 +315,33 @@ public class CogModGrammarAccess extends AbstractElementFinder.AbstractGrammarEl
 		//EString
 		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
 	}
+	public class EStringElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.coresense.cognitivemodule.CogMod.EString");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cSTRINGTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//EString returns ecore::EString:
+		//    STRING | ID;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//STRING | ID
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_0() { return cSTRINGTerminalRuleCall_0; }
+		
+		//ID
+		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
+	}
 	
 	
 	private final CognitiveModuleElements pCognitiveModule;
-	private final EStringElements pEString;
 	private final CoreElements pCore;
 	private final ModeletElements pModelet;
 	private final MetaElements pMeta;
 	private final CouplingElements pCoupling;
+	private final EStringElements pEString;
 	private final TerminalRule tBEGIN;
 	private final TerminalRule tEND;
 	
@@ -365,11 +355,11 @@ public class CogModGrammarAccess extends AbstractElementFinder.AbstractGrammarEl
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pCognitiveModule = new CognitiveModuleElements();
-		this.pEString = new EStringElements();
 		this.pCore = new CoreElements();
 		this.pModelet = new ModeletElements();
 		this.pMeta = new MetaElements();
 		this.pCoupling = new CouplingElements();
+		this.pEString = new EStringElements();
 		this.tBEGIN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "eu.coresense.cognitivemodule.CogMod.BEGIN");
 		this.tEND = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "eu.coresense.cognitivemodule.CogMod.END");
 	}
@@ -426,26 +416,6 @@ public class CogModGrammarAccess extends AbstractElementFinder.AbstractGrammarEl
 		return getCognitiveModuleAccess().getRule();
 	}
 	
-	////CognitiveModule returns CognitiveModule:
-	////    'CognitiveModule'
-	////    name=EString
-	////    '{'
-	////        'core' core=Core
-	////        ('efferent' '{' efferent+=Modelet ( "," efferent+=Modelet)* '}' )?
-	////        ('afferent' '{' afferent+=Modelet ( "," afferent+=Modelet)* '}' )?
-	////        'meta' meta=Meta
-	////        'coupling' coupling=Coupling
-	////    '}';
-	//EString returns ecore::EString:
-	//    STRING | ID;
-	public EStringElements getEStringAccess() {
-		return pEString;
-	}
-	
-	public ParserRule getEStringRule() {
-		return getEStringAccess().getRule();
-	}
-	
 	//Core returns Core:
 	//    {Core}
 	//    name=EString;
@@ -491,6 +461,16 @@ public class CogModGrammarAccess extends AbstractElementFinder.AbstractGrammarEl
 	
 	public ParserRule getCouplingRule() {
 		return getCouplingAccess().getRule();
+	}
+	
+	//EString returns ecore::EString:
+	//    STRING | ID;
+	public EStringElements getEStringAccess() {
+		return pEString;
+	}
+	
+	public ParserRule getEStringRule() {
+		return getEStringAccess().getRule();
 	}
 	
 	/////////////////////

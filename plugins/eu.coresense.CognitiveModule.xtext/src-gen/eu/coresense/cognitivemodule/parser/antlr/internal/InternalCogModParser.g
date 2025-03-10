@@ -245,40 +245,6 @@ ruleCognitiveModule returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleEString
-entryRuleEString returns [String current=null]:
-	{ newCompositeNode(grammarAccess.getEStringRule()); }
-	iv_ruleEString=ruleEString
-	{ $current=$iv_ruleEString.current.getText(); }
-	EOF;
-
-// Rule EString
-ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		this_STRING_0=RULE_STRING
-		{
-			$current.merge(this_STRING_0);
-		}
-		{
-			newLeafNode(this_STRING_0, grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0());
-		}
-		    |
-		this_ID_1=RULE_ID
-		{
-			$current.merge(this_ID_1);
-		}
-		{
-			newLeafNode(this_ID_1, grammarAccess.getEStringAccess().getIDTerminalRuleCall_1());
-		}
-	)
-;
-
 // Entry rule entryRuleCore
 entryRuleCore returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getCoreRule()); }
@@ -507,5 +473,39 @@ ruleCoupling returns [EObject current=null]
 				}
 			)
 		)
+	)
+;
+
+// Entry rule entryRuleEString
+entryRuleEString returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getEStringRule()); }
+	iv_ruleEString=ruleEString
+	{ $current=$iv_ruleEString.current.getText(); }
+	EOF;
+
+// Rule EString
+ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		this_STRING_0=RULE_STRING
+		{
+			$current.merge(this_STRING_0);
+		}
+		{
+			newLeafNode(this_STRING_0, grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0());
+		}
+		    |
+		this_ID_1=RULE_ID
+		{
+			$current.merge(this_ID_1);
+		}
+		{
+			newLeafNode(this_ID_1, grammarAccess.getEStringAccess().getIDTerminalRuleCall_1());
+		}
 	)
 ;

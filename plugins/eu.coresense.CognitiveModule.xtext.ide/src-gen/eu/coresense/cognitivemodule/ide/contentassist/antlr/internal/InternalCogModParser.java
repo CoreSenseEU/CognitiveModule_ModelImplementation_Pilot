@@ -172,89 +172,12 @@ public class InternalCogModParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleCognitiveModule"
 
 
-    // $ANTLR start "entryRuleEString"
-    // InternalCogModParser.g:88:1: entryRuleEString : ruleEString EOF ;
-    public final void entryRuleEString() throws RecognitionException {
-        try {
-            // InternalCogModParser.g:89:1: ( ruleEString EOF )
-            // InternalCogModParser.g:90:1: ruleEString EOF
-            {
-             before(grammarAccess.getEStringRule()); 
-            pushFollow(FOLLOW_1);
-            ruleEString();
-
-            state._fsp--;
-
-             after(grammarAccess.getEStringRule()); 
-            match(input,EOF,FOLLOW_2); 
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-        }
-        return ;
-    }
-    // $ANTLR end "entryRuleEString"
-
-
-    // $ANTLR start "ruleEString"
-    // InternalCogModParser.g:97:1: ruleEString : ( ( rule__EString__Alternatives ) ) ;
-    public final void ruleEString() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalCogModParser.g:101:2: ( ( ( rule__EString__Alternatives ) ) )
-            // InternalCogModParser.g:102:2: ( ( rule__EString__Alternatives ) )
-            {
-            // InternalCogModParser.g:102:2: ( ( rule__EString__Alternatives ) )
-            // InternalCogModParser.g:103:3: ( rule__EString__Alternatives )
-            {
-             before(grammarAccess.getEStringAccess().getAlternatives()); 
-            // InternalCogModParser.g:104:3: ( rule__EString__Alternatives )
-            // InternalCogModParser.g:104:4: rule__EString__Alternatives
-            {
-            pushFollow(FOLLOW_2);
-            rule__EString__Alternatives();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getEStringAccess().getAlternatives()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "ruleEString"
-
-
     // $ANTLR start "entryRuleCore"
-    // InternalCogModParser.g:113:1: entryRuleCore : ruleCore EOF ;
+    // InternalCogModParser.g:88:1: entryRuleCore : ruleCore EOF ;
     public final void entryRuleCore() throws RecognitionException {
         try {
-            // InternalCogModParser.g:114:1: ( ruleCore EOF )
-            // InternalCogModParser.g:115:1: ruleCore EOF
+            // InternalCogModParser.g:89:1: ( ruleCore EOF )
+            // InternalCogModParser.g:90:1: ruleCore EOF
             {
              before(grammarAccess.getCoreRule()); 
             pushFollow(FOLLOW_1);
@@ -280,21 +203,21 @@ public class InternalCogModParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleCore"
-    // InternalCogModParser.g:122:1: ruleCore : ( ( rule__Core__Group__0 ) ) ;
+    // InternalCogModParser.g:97:1: ruleCore : ( ( rule__Core__Group__0 ) ) ;
     public final void ruleCore() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCogModParser.g:126:2: ( ( ( rule__Core__Group__0 ) ) )
-            // InternalCogModParser.g:127:2: ( ( rule__Core__Group__0 ) )
+            // InternalCogModParser.g:101:2: ( ( ( rule__Core__Group__0 ) ) )
+            // InternalCogModParser.g:102:2: ( ( rule__Core__Group__0 ) )
             {
-            // InternalCogModParser.g:127:2: ( ( rule__Core__Group__0 ) )
-            // InternalCogModParser.g:128:3: ( rule__Core__Group__0 )
+            // InternalCogModParser.g:102:2: ( ( rule__Core__Group__0 ) )
+            // InternalCogModParser.g:103:3: ( rule__Core__Group__0 )
             {
              before(grammarAccess.getCoreAccess().getGroup()); 
-            // InternalCogModParser.g:129:3: ( rule__Core__Group__0 )
-            // InternalCogModParser.g:129:4: rule__Core__Group__0
+            // InternalCogModParser.g:104:3: ( rule__Core__Group__0 )
+            // InternalCogModParser.g:104:4: rule__Core__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__Core__Group__0();
@@ -327,11 +250,11 @@ public class InternalCogModParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleModelet"
-    // InternalCogModParser.g:138:1: entryRuleModelet : ruleModelet EOF ;
+    // InternalCogModParser.g:113:1: entryRuleModelet : ruleModelet EOF ;
     public final void entryRuleModelet() throws RecognitionException {
         try {
-            // InternalCogModParser.g:139:1: ( ruleModelet EOF )
-            // InternalCogModParser.g:140:1: ruleModelet EOF
+            // InternalCogModParser.g:114:1: ( ruleModelet EOF )
+            // InternalCogModParser.g:115:1: ruleModelet EOF
             {
              before(grammarAccess.getModeletRule()); 
             pushFollow(FOLLOW_1);
@@ -357,21 +280,21 @@ public class InternalCogModParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleModelet"
-    // InternalCogModParser.g:147:1: ruleModelet : ( ( rule__Modelet__Group__0 ) ) ;
+    // InternalCogModParser.g:122:1: ruleModelet : ( ( rule__Modelet__Group__0 ) ) ;
     public final void ruleModelet() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCogModParser.g:151:2: ( ( ( rule__Modelet__Group__0 ) ) )
-            // InternalCogModParser.g:152:2: ( ( rule__Modelet__Group__0 ) )
+            // InternalCogModParser.g:126:2: ( ( ( rule__Modelet__Group__0 ) ) )
+            // InternalCogModParser.g:127:2: ( ( rule__Modelet__Group__0 ) )
             {
-            // InternalCogModParser.g:152:2: ( ( rule__Modelet__Group__0 ) )
-            // InternalCogModParser.g:153:3: ( rule__Modelet__Group__0 )
+            // InternalCogModParser.g:127:2: ( ( rule__Modelet__Group__0 ) )
+            // InternalCogModParser.g:128:3: ( rule__Modelet__Group__0 )
             {
              before(grammarAccess.getModeletAccess().getGroup()); 
-            // InternalCogModParser.g:154:3: ( rule__Modelet__Group__0 )
-            // InternalCogModParser.g:154:4: rule__Modelet__Group__0
+            // InternalCogModParser.g:129:3: ( rule__Modelet__Group__0 )
+            // InternalCogModParser.g:129:4: rule__Modelet__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__Modelet__Group__0();
@@ -404,11 +327,11 @@ public class InternalCogModParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleMeta"
-    // InternalCogModParser.g:163:1: entryRuleMeta : ruleMeta EOF ;
+    // InternalCogModParser.g:138:1: entryRuleMeta : ruleMeta EOF ;
     public final void entryRuleMeta() throws RecognitionException {
         try {
-            // InternalCogModParser.g:164:1: ( ruleMeta EOF )
-            // InternalCogModParser.g:165:1: ruleMeta EOF
+            // InternalCogModParser.g:139:1: ( ruleMeta EOF )
+            // InternalCogModParser.g:140:1: ruleMeta EOF
             {
              before(grammarAccess.getMetaRule()); 
             pushFollow(FOLLOW_1);
@@ -434,21 +357,21 @@ public class InternalCogModParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleMeta"
-    // InternalCogModParser.g:172:1: ruleMeta : ( ( rule__Meta__Group__0 ) ) ;
+    // InternalCogModParser.g:147:1: ruleMeta : ( ( rule__Meta__Group__0 ) ) ;
     public final void ruleMeta() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCogModParser.g:176:2: ( ( ( rule__Meta__Group__0 ) ) )
-            // InternalCogModParser.g:177:2: ( ( rule__Meta__Group__0 ) )
+            // InternalCogModParser.g:151:2: ( ( ( rule__Meta__Group__0 ) ) )
+            // InternalCogModParser.g:152:2: ( ( rule__Meta__Group__0 ) )
             {
-            // InternalCogModParser.g:177:2: ( ( rule__Meta__Group__0 ) )
-            // InternalCogModParser.g:178:3: ( rule__Meta__Group__0 )
+            // InternalCogModParser.g:152:2: ( ( rule__Meta__Group__0 ) )
+            // InternalCogModParser.g:153:3: ( rule__Meta__Group__0 )
             {
              before(grammarAccess.getMetaAccess().getGroup()); 
-            // InternalCogModParser.g:179:3: ( rule__Meta__Group__0 )
-            // InternalCogModParser.g:179:4: rule__Meta__Group__0
+            // InternalCogModParser.g:154:3: ( rule__Meta__Group__0 )
+            // InternalCogModParser.g:154:4: rule__Meta__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__Meta__Group__0();
@@ -481,11 +404,11 @@ public class InternalCogModParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleCoupling"
-    // InternalCogModParser.g:188:1: entryRuleCoupling : ruleCoupling EOF ;
+    // InternalCogModParser.g:163:1: entryRuleCoupling : ruleCoupling EOF ;
     public final void entryRuleCoupling() throws RecognitionException {
         try {
-            // InternalCogModParser.g:189:1: ( ruleCoupling EOF )
-            // InternalCogModParser.g:190:1: ruleCoupling EOF
+            // InternalCogModParser.g:164:1: ( ruleCoupling EOF )
+            // InternalCogModParser.g:165:1: ruleCoupling EOF
             {
              before(grammarAccess.getCouplingRule()); 
             pushFollow(FOLLOW_1);
@@ -511,21 +434,21 @@ public class InternalCogModParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleCoupling"
-    // InternalCogModParser.g:197:1: ruleCoupling : ( ( rule__Coupling__Group__0 ) ) ;
+    // InternalCogModParser.g:172:1: ruleCoupling : ( ( rule__Coupling__Group__0 ) ) ;
     public final void ruleCoupling() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCogModParser.g:201:2: ( ( ( rule__Coupling__Group__0 ) ) )
-            // InternalCogModParser.g:202:2: ( ( rule__Coupling__Group__0 ) )
+            // InternalCogModParser.g:176:2: ( ( ( rule__Coupling__Group__0 ) ) )
+            // InternalCogModParser.g:177:2: ( ( rule__Coupling__Group__0 ) )
             {
-            // InternalCogModParser.g:202:2: ( ( rule__Coupling__Group__0 ) )
-            // InternalCogModParser.g:203:3: ( rule__Coupling__Group__0 )
+            // InternalCogModParser.g:177:2: ( ( rule__Coupling__Group__0 ) )
+            // InternalCogModParser.g:178:3: ( rule__Coupling__Group__0 )
             {
              before(grammarAccess.getCouplingAccess().getGroup()); 
-            // InternalCogModParser.g:204:3: ( rule__Coupling__Group__0 )
-            // InternalCogModParser.g:204:4: rule__Coupling__Group__0
+            // InternalCogModParser.g:179:3: ( rule__Coupling__Group__0 )
+            // InternalCogModParser.g:179:4: rule__Coupling__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__Coupling__Group__0();
@@ -555,6 +478,83 @@ public class InternalCogModParser extends AbstractInternalContentAssistParser {
         return ;
     }
     // $ANTLR end "ruleCoupling"
+
+
+    // $ANTLR start "entryRuleEString"
+    // InternalCogModParser.g:188:1: entryRuleEString : ruleEString EOF ;
+    public final void entryRuleEString() throws RecognitionException {
+        try {
+            // InternalCogModParser.g:189:1: ( ruleEString EOF )
+            // InternalCogModParser.g:190:1: ruleEString EOF
+            {
+             before(grammarAccess.getEStringRule()); 
+            pushFollow(FOLLOW_1);
+            ruleEString();
+
+            state._fsp--;
+
+             after(grammarAccess.getEStringRule()); 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleEString"
+
+
+    // $ANTLR start "ruleEString"
+    // InternalCogModParser.g:197:1: ruleEString : ( ( rule__EString__Alternatives ) ) ;
+    public final void ruleEString() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalCogModParser.g:201:2: ( ( ( rule__EString__Alternatives ) ) )
+            // InternalCogModParser.g:202:2: ( ( rule__EString__Alternatives ) )
+            {
+            // InternalCogModParser.g:202:2: ( ( rule__EString__Alternatives ) )
+            // InternalCogModParser.g:203:3: ( rule__EString__Alternatives )
+            {
+             before(grammarAccess.getEStringAccess().getAlternatives()); 
+            // InternalCogModParser.g:204:3: ( rule__EString__Alternatives )
+            // InternalCogModParser.g:204:4: rule__EString__Alternatives
+            {
+            pushFollow(FOLLOW_2);
+            rule__EString__Alternatives();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getEStringAccess().getAlternatives()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleEString"
 
 
     // $ANTLR start "rule__EString__Alternatives"
