@@ -3,6 +3,11 @@
  */
 package eu.coresense.cognitivemodule.validation;
 
+import org.eclipse.xtext.validation.Check;
+
+import eu.coresense.CognitiveModule.CognitiveModule;
+import eu.coresense.CognitiveModule.Modelet;
+
 
 /**
  * This class contains custom validation rules. 
@@ -11,15 +16,26 @@ package eu.coresense.cognitivemodule.validation;
  */
 public class CogModValidator extends AbstractCogModValidator {
 	
-//	public static final String INVALID_NAME = "invalidName";
-//
-//	@Check
-//	public void checkGreetingStartsWithCapital(Greeting greeting) {
-//		if (!Character.isUpperCase(greeting.getName().charAt(0))) {
-//			warning("Name should start with a capital",
-//					CogModPackage.Literals.GREETING__NAME,
-//					INVALID_NAME);
-//		}
-//	}
-	
+	public static final String INVALID_MSG_TYPE = "invalidMsgType";
+	public static final String NAME_CONVENTION = "nameConvention";
+
+	@Check
+	public void checkMessageType(Modelet modelet) {
+	    if (modelet.getType() != null) {
+	        if (!modelet.getType().contains("/msg/")) {
+	            error("The type of the interface must be specified following the ROS conventions 'PkgName/msg/MsgName'",
+	                    null,
+	                    INVALID_MSG_TYPE);
+	        }
+	    }
+	}
+
+	@Check
+	public void checkNameConvention(CognitiveModule cognitive_module) {
+		if (Character.isUpperCase(cognitive_module.getCore().getName().charAt(0))) {
+			warning("The ROS naming convetions stablishes that the names must start with lowercase alphanumeric characters, see https://ros.org/reps/rep-0144.html",
+					null,
+					NAME_CONVENTION);
+		}
+	}
 }
