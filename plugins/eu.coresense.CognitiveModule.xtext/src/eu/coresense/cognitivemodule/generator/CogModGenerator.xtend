@@ -7,6 +7,8 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
+import eu.coresense.CognitiveModule.CognitiveModule
+import com.google.inject.Inject
 
 /**
  * Generates code from your model files on save.
@@ -14,12 +16,15 @@ import org.eclipse.xtext.generator.IGeneratorContext
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#code-generation
  */
 class CogModGenerator extends AbstractGenerator {
+    
+    @Inject extension ReadmeCompiler
 
-	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
-//		fsa.generateFile('greetings.txt', 'People to greet: ' + 
-//			resource.allContents
-//				.filter(Greeting)
-//				.map[name]
-//				.join(', '))
-	}
-}
+	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context){
+        for (cognitive_module : resource.allContents.toIterable.filter(CognitiveModule)){
+            fsa.generateFile(
+                cognitive_module.getName().toLowerCase+"/README.md",
+                compile_toREADME(cognitive_module).toString().replace("\t","  ")
+            )
+        }}
+    
+    }
