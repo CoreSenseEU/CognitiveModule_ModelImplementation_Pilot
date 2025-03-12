@@ -2,7 +2,7 @@
 <feature
       id="eu.coresense.CognitiveModule.feature"
       label="CoreSense Cognitive Module Feature"
-      version="1.0.0.qualifier"
+      version="0.1.0"
       provider-name="Fraunhofer IPA">
 
    <description url="http://www.example.com/description">
@@ -19,26 +19,26 @@
 
    <plugin
          id="eu.coresense.CognitiveModule.xtext.ui"
-         version="1.0.0.qualifier"/>
+         version="0.1.0"/>
 
    <plugin
          id="eu.coresense.CognitiveModule.xtext"
-         version="1.0.0.qualifier"/>
+         version="0.1.0"/>
 
    <plugin
          id="eu.coresense.CognitiveModule"
-         version="0.1.0.qualifier"/>
+         version="0.1.0"/>
 
    <plugin
          id="eu.coresense.CognitiveModule.edit"
-         version="1.0.0.qualifier"/>
+         version="0.1.0"/>
 
    <plugin
          id="eu.coresense.CognitiveModule.editor"
-         version="1.0.0.qualifier"/>
+         version="0.1.0"/>
 
    <plugin
          id="eu.coresense.CognitiveModule.xtext.ide"
-         version="1.0.0.qualifier"/>
+         version="0.1.0"/>
 
 </feature>
