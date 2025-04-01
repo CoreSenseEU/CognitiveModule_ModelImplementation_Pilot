@@ -1,0 +1,12 @@
+image_filter:
+  core: image_filter
+  efferent:
+    image_input:
+      topic: "/image_raw"
+      type: "sensor_msgs/msg/Image"
+  afferent:
+    detections:
+      topic: "/detections"
+      type: "sensor_msgs/msg/Image"
+  meta: default_meta
+  coupling: default_coupling
