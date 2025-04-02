@@ -5,7 +5,7 @@
     <parent>
         <groupId>eu.coresense.CognitiveModule</groupId>
         <artifactId>eu.coresense.CognitiveModule.parent</artifactId>
-        <version>0.1.0</version>
+        <version>0.1.1</version>
         <relativePath>../eu.coresense.CognitiveModule.parent/pom.xml</relativePath>
     </parent>
     <artifactId>eu.coresense.CognitiveModule.xtext.ide</artifactId>

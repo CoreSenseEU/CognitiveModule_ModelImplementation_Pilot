@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: eu.coresense.CognitiveModule;singleton:=true
 Automatic-Module-Name: eu.coresense.CognitiveModule
-Bundle-Version: 0.1.0
+Bundle-Version: 0.1.1
 Bundle-ClassPath: .
 Bundle-Vendor: Fraunhofer IPA
 Bundle-Localization: plugin

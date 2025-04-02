@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: eu.coresense.CognitiveModule.edit;singleton:=true
 Automatic-Module-Name: eu.coresense.CognitiveModule.edit
-Bundle-Version: 0.1.0
+Bundle-Version: 0.1.1
 Bundle-ClassPath: .
 Bundle-Activator: eu.coresense.CognitiveModule.provider.CognitiveModuleEditPlugin$Implementation
 Bundle-Vendor: Fraunhofer IPA

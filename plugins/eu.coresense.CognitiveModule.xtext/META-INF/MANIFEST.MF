@@ -3,7 +3,7 @@ Automatic-Module-Name: eu.coresense.CognitiveModule.xtext
 Bundle-ManifestVersion: 2
 Bundle-Name: eu.coresense.CognitiveModule.xtext
 Bundle-Vendor: Fraunhofer IPA
-Bundle-Version: 0.1.0
+Bundle-Version: 0.1.1
 Bundle-SymbolicName: eu.coresense.CognitiveModule.xtext; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: eu.coresense.CognitiveModule,
